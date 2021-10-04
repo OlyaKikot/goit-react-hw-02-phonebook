@@ -28,6 +28,7 @@ class App extends React.Component {
   onFormSubmit = (name, number) => {
     if (this.state.contacts.find((contact) => contact.name === name)) {
       alert(name + " is already in contacts");
+      return;
     }
     this.setState((prevState) => ({
       contacts: [
